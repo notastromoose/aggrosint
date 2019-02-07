@@ -4,7 +4,7 @@ AggrOSINT is a proof-of-concept OSINT team collaboration tool. It was thrown tog
 
 pip3 install django
 
-git clone https://github.com/notastromoose/osint.git
+git clone https://github.com/notastromoose/aggrosint.git
 
 cd aggrosint/aggrosint/
 
