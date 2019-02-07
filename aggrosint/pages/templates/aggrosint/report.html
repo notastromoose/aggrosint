@@ -1,0 +1,134 @@
+{% include "aggrosint/partials/header.html" %}
+		<div class="wrapper">
+			<div class="column1">
+			</div>
+			<div class="content">
+				<p>
+					<h1>{{op.name}}</h1>
+				</p>
+				<div class="reportbody">
+				<nav>
+				<ul>
+					<li>
+						<button class="btn btn-dark" data-toggle="collapse" data-target="#basicinfo">Basic Subject Information</button>
+						<div id="basicinfo" class="collapse">
+							{% for entry in report %}
+							{% if entry.category == 'bi' %}
+							<div class="card">
+								<div class="card-body">
+									<h3>{{entry.title}}</h3>
+									<span class="intelurl"><a href="#">{{entry.url}}</a></span><br/>
+									<span class="inteljust">{{entry.reason}}</span>
+								</div>
+                                                        </div>
+							{% endif %}
+							{% endfor %}
+						</div>
+					</li>
+					<li>
+						<button class="btn btn-dark" data-toggle="collapse" data-target="#advanced-info">Advanced Subject Information</button>
+                                                <div id="advanced-info" class="collapse">
+							{% for entry in report %}
+                                                        {% if entry.category == 'ai' %}
+                                                        <div class="card">
+                                                                <div class="card-body">
+                                                                        <h3>{{entry.title}}</h3>
+                                                                        <span class="intelurl"><a href="#">{{entry.url}}</a></span><br/>
+                                                                        <span class="inteljust">{{entry.reason}}</span>
+                                                                </div>
+                                                        </div>
+                                                        {% endif %}
+                                                        {% endfor %}
+                                                </div>
+                                        </li>
+					<li>
+                                                <button class="btn btn-dark" data-toggle="collapse" data-target="#last-seen">Day Last Seen</button>
+                                                <div id="last-seen" class="collapse">
+							{% for entry in report %}
+                                                        {% if entry.category == 'dls' %}
+                                                        <div class="card">
+                                                                <div class="card-body">
+                                                                        <h3>{{entry.title}}</h3>
+                                                                        <span class="intelurl"><a href="#">{{entry.url}}</a></span><br/>
+                                                                        <span class="inteljust">{{entry.reason}}</span>
+                                                                </div>
+                                                        </div>
+                                                        {% endif %}
+                                                        {% endfor %}
+                                                </div>
+                                        </li>
+					<li>
+                                                <button class="btn btn-dark" data-toggle="collapse" data-target="#family">Family</button>
+                                                <div id="family" class="collapse">
+							{% for entry in report %}
+                                                        {% if entry.category == 'fa' %}
+                                                        <div class="card">
+                                                                <div class="card-body">
+                                                                        <h3>{{entry.title}}</h3>
+                                                                        <span class="intelurl"><a href="#">{{entry.url}}</a></span><br/>
+                                                                        <span class="inteljust">{{entry.reason}}</span>
+                                                                </div>
+                                                        </div>
+                                                        {% endif %}
+                                                        {% endfor %}
+                                                </div>
+                                        </li>
+					<li>
+                                                <button class="btn btn-dark" data-toggle="collapse" data-target="#friends">Friends</button>
+                                                <div id="friends" class="collapse">
+							{% for entry in report %}
+                                                        {% if entry.category == 'fr' %}
+                                                        <div class="card">
+                                                                <div class="card-body">
+                                                                        <h3>{{entry.title}}</h3>
+                                                                        <span class="intelurl"><a href="#">{{entry.url}}</a></span><br/>
+                                                                        <span class="inteljust">{{entry.reason}}</span>
+                                                                </div>
+                                                        </div>
+                                                        {% endif %}
+                                                        {% endfor %}
+                                                </div>
+                                        </li>
+					<li>
+                                                <button class="btn btn-dark" data-toggle="collapse" data-target="#employment">Employment</button>
+                                                <div id="employment" class="collapse">
+							{% for entry in report %}
+                                                        {% if entry.category == 'em' %}
+                                                        <div class="card">
+                                                                <div class="card-body">
+                                                                        <h3>{{entry.title}}</h3>
+                                                                        <span class="intelurl"><a href="#">{{entry.url}}</a></span><br/>
+                                                                        <span class="inteljust">{{entry.reason}}</span>
+                                                                </div>
+                                                        </div>
+                                                        {% endif %}
+                                                        {% endfor %}
+                                                </div>
+                                        </li>
+					<li>
+                                                <button class="btn btn-dark" data-toggle="collapse" data-target="#darkweb">Darkweb</button>
+                                                <div id="darkweb" class="collapse">
+							{% for entry in report %}
+                                                        {% if entry.category == 'dw' %}
+                                                        <div class="card">
+                                                                <div class="card-body">
+                                                                        <h3>{{entry.title}}</h3>
+                                                                        <span class="intelurl"><a href="#">{{entry.url}}</a></span><br/>
+                                                                        <span class="inteljust">{{entry.reason}}</span>
+                                                                </div>
+                                                        </div>
+                                                        {% endif %}
+                                                        {% endfor %}
+						</div>
+                                        </li>
+				</ul>
+				</nav>
+				</div>
+			</div>
+			<div class="column2">
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>AggrOSINT - Analyst Dashboard</title>
+		{% load static %}
+		<script src="{% static 'js/main.js' %}"></script> <!-- This is how to include a static file -->
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" />
+	</head>
+	<body>
+		<p>
+			<h1>Analyst Dashboard</h1>
+		</p>
+		<div id='tools'>
+			<ul>
+				<li>
+					<h2>People Search Engines</h2>
+					<ul>
+						{% for tool in all_tools_list %}
+		                			{% if tool.category == "People Search" %}
+					                <li><a href="{{ tool.url }}">{{ tool.title }} - {{ tool.category }}</a></li>
+                		                	{% endif %}
+						{% endfor %}
+
+					</ul>
+				</li>
+				<li>
+                                        <h2>Social Media</h2>
+                                        <ul>
+						{% for tool in all_tools_list %}
+                                                        {% if tool.category == "Social Media" %}
+                                                        <li><a href="{{ tool.url }}">{{ tool.title }} - {{ tool.category }}</a></li>
+                                                        {% endif %}
+                                                {% endfor %}
+                                        </ul>
+                                </li>
+			</ul>
+			
+		</div>
+
+	</body>
+</html>

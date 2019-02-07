@@ -1,0 +1,29 @@
+{% include "aggrosint/partials/header.html"  %}
+		<div class="wrapper">
+			<div class="column1">
+			</div>
+			 <div class="content">
+                                <p>
+                                        <h1>Operations</h1>
+                                        <h2>Select an operation to contribute to.</h2>
+                                </p>
+                                <div class="oplist">
+                                        <ul>
+						{% for ops in operations %}
+                                                <li>
+                                                        <button class="btn btn-dark" data-toggle="collapse" data-target="#op-{{forloop.counter0}}">{{ops.title}}</button>
+							<div id="op-{{forloop.counter0}}" class="collapse">
+								<a href="/report?op={{forloop.counter0}}" class="btn btn-link"><h3>{{ops.name}}</h3></a>
+								<p>{{ops.body}}</p>
+							</div>
+                                                </li>
+						{% endfor %}
+                                        </ul>
+                                </div>
+                        </div>
+
+		</div>
+		<div class="footer">
+		</div>
+	</body>
+</html>

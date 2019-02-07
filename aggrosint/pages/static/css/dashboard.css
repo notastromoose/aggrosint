@@ -1,0 +1,33 @@
+.tools{
+	width: 49%;
+	margin-top: 20px;
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-top: 10px;
+	float: left;
+}
+.tools ul{
+        list-style-type: none;
+
+}
+.tools button{
+        padding: 2%;
+        margin: 2px;
+}
+.submission{
+	width: 49%;
+        margin-top: 20px;
+	margin-left: 10px;
+        padding-right: 30px;
+        padding-top: 10px;
+	float: left;
+}
+.submission form{
+	margin-left: 15px;
+}
+#submit{
+	margin-left: 74%;
+}
+
+
+
